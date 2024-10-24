@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'npm install'
+                bat 'npm install'
 
                 // Add build commands, e.g., Maven, Gradle, npm, etc.
                 // sh 'mvn clean install' or sh 'npm install'
@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                sh 'node app.js'
+                bat 'node app.js'
                 // Add deployment commands, e.g., copying files to a server
                 // sh 'scp target/*.war user@server:/path/to/deploy'
             }
