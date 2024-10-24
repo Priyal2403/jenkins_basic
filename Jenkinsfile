@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                sh 'node server.js'
+                sh 'node app.js'
                 // Add deployment commands, e.g., copying files to a server
                 // sh 'scp target/*.war user@server:/path/to/deploy'
             }
